@@ -2,10 +2,7 @@ import sys
 
 BOARD_WIDTH = 7
 BOARD_HEIGHT = 6
-
 EMPTY_SPACE = "."
-PLAYER_X = "X"
-PLAYER_O = "O"
 COLUMN_LABELS = ("1", "2", "3", "4", "5", "6", "7")
 assert len(COLUMN_LABELS) == BOARD_WIDTH
 
@@ -18,7 +15,7 @@ def main():
     # Set up a new game:
     gameBoard = getNewBoard()
     # in this line of code he declares a starting point by making playerTurn equal X.
-    playerTurn = PLAYER_X
+
 
     while True:  # Run a player's turn.
         # Display the board and get player's move:
