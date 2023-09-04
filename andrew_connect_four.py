@@ -16,26 +16,31 @@ assert len(COLUMN_LABELS) == BOARD_WIDTH
 
 def main():
     start_game()
-        
+    number_of_players()
 
 def start_game():
         print("""\n Hello and welcome to connect 4! The goal of this game is to place four tiles on the board in a row before your opponents do.
             Victory can be achieved vertically, horizontally, or diagonally!""")
 
 def number_of_players():
-        input("How many players are going to be playing in this game? Up to four people can play! \n ")
-        response = input('>').upper().strip()
-        if response == 2:
-            print("Two player game activate!")
-            two_player_game()
-        elif response == 3:
-            three_player_game()
-        elif response == 4:
-            four_player_game()
-        elif response == 'QUIT' & 'EXIT':
-            sys.exit()
-        
-
+        while True: 
+            print("How many players are going to be playing in this game? Up to four people can play! \n ")
+            response = (input('>')).strip().upper()
+            if response == "QUIT":
+                print("Some other time than. Have a great rest of your day!")
+                sys.exit()
+            elif response == "2":
+                print("Two player game activate!")
+                two_player_game()
+            elif response == "3":
+                print("Three player game activate!")
+                three_player_game()
+            elif response == "4":
+                print("Four player game activate!")
+                four_player_game()
+            else:
+                    print("please enter a number from 1-4 or type QUIT to quit!")
+                    continue
 
 def two_player_game():
         print("Okay, this will be a two player game. Player 1 go ahead and start us off!")
