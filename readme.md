@@ -1,57 +1,67 @@
-# This my development process for how I created my connect 4 game. 
+# This my development process for how I created my connect 4 game.
 
-# Question
+Develop the game logic first and define the function names first. Than build the functions.
+That way you are not confused.
 
-What parts do I need to build to create a connect four game?
+Establish board pieces
 
-# I need a board # and a test for the board
+Player_O = 0
+Player_X = X
+Player_Y = Y
+Player_Z = Z
 
-# I need pieces
+Empty_Space = '.'
 
-# I need players
+Column_Labels = "1","2","3","4","5","6","7"
+Row_Labels = "1","2","3","4","5","6","7"
 
-What functions and logic do I need to create this game?
+def main()
 
-# I need an introduction to the rules
+player_turn = X
 
-# I need win condition logic checker
+introduce_game_function
+"hello welcome to connect four!"
+input() how many players are we playing today?
 
-# I need tie condition logic checker
+I am thinking if and input statements
 
-# I need a player turn switch logic
+def introduce_game()
+Input the number of players, in this case we want up to 4.
 
-------------------------------------------------------------
+if two player game 2 players if three than 3 players if four players than 4 players.
 
-# Outline
+if code for two player game under one if statement
 
-# Establish the pieces and the board
+elif code for three player game under elif 
 
-# Establish the test
+elif code for four player game for four player game: 
 
-# Game logic main()
+elif "QUIT" to quit the loop
 
-# Introduce the players to the game rules
-
-# Have a player turn logic function.
-# What do I need the program to do to have a good player logic function?
-# It needs to be able to determine whose turn it is. 
-# It needs to ask the player to make a column selection. 
-
+else: "invalid selection"
 
 
-# Have it check for win, loss, and tie conditions and declare the last player the winner if the conditions are met. If not allow the player turn to pass correct player.
+if not a valid answer than tell them to pick it again.
+if quit than quit.
 
-# Display the board to the player and have them make a choice.
+Turn order logic
+Please type in the desired turn order by player number.
+input = player_turn_order = variable.
+have a confirmation step (the player order is 1,2,3,4 is this correct? if 'y' than lets play if 'n'
+than take them back to the main menu and start over. if not a valid response than say give me a valid response)
 
- 
-# Ask the player to input their choice. via the input function.
+(in the case of the outline lets do 1,2,3,4 turn order)
 
-# The input is recieved and the board is updated with the player choice.
+I want display the board and ask the player.
+'player {1}, please select which column number you want to place your tile into.
+a number for your column.
 
-# The while loop loops to the next player checking for the win condition. if not than
+I want python to evaluate the board to see if there is an available space in that column.
+If the selection has made that player a winner.
+If the selection was a valid one, if not I need the program to inform the player and bring it back to the loop.
+If the board is completley full and the game must be declared a draw.
+If none of the conditions are met than the tile is updated on the board.
 
-# the game continues.
+Than I need the next player to have their turn via the turn order logic.
 
-# We do allow a exit function().
-
-# the board than
+Eventually a winner is declared and the game exits!

@@ -12,10 +12,8 @@ assert len(COLUMN_LABELS) == BOARD_WIDTH
 
 def main():
     print(
-        """Four in a Row, by Al Sweigart al@inventwithpython.com
-          Two players take turns dropping tiles into one of seven columns, trying
-          to make four in a row horizontally, vertically, or diagonally. """
-    )
+        """Four in a Row, by Al Sweigart al@inventwithpython.com Two players take turns dropping tiles into one of seven columns, trying to make four in a row horizontally, vertically, or diagonally. """)
+    
 
     # Set up a new game:
     gameBoard = getNewBoard()
